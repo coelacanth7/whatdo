@@ -9,7 +9,7 @@ import {
 import { API_KEY } from "./config.json";
 
 const baseURI =
-	"https://maps.googleapis.com/maps/api/place/nearbysearch/json?radius=15000&location=";
+	"https://maps.googleapis.com/maps/api/place/nearbysearch/json?radius=15000&type=bar&location=";
 
 export default class App extends React.Component {
 	constructor(props) {
