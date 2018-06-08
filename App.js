@@ -9,8 +9,7 @@ import {
 
 const baseURI =
 	"https://maps.googleapis.com/maps/api/place/nearbysearch/json?radius=15000&location=";
-// "-33.8670522,151.1957362&key=AIzaSyCv4W7PfNeYhxsYnlU8evth0k-slUQeGk0";
-const key = "AIzaSyCv4W7PfNeYhxsYnlU8evth0k-slUQeGk0";
+const key = "";
 
 export default class App extends React.Component {
 	constructor(props) {
