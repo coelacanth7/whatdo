@@ -6,10 +6,10 @@ import {
 	View,
 	ActivityIndicator
 } from "react-native";
+import { API_KEY } from "./config.json";
 
 const baseURI =
 	"https://maps.googleapis.com/maps/api/place/nearbysearch/json?radius=15000&location=";
-const key = "";
 
 export default class App extends React.Component {
 	constructor(props) {
@@ -41,7 +41,7 @@ export default class App extends React.Component {
 			.then(pos => {
 				let latt = pos.coords.latitude;
 				let long = pos.coords.longitude;
-				return fetch(`${baseURI}${latt},${long}&key=${key}`);
+				return fetch(`${baseURI}${latt},${long}&key=${API_KEY}`);
 			})
 			.then(res => res.json())
 			.then(json => {
