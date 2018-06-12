@@ -38,11 +38,9 @@ export default class App extends React.Component {
 
 	componentDidMount() {
 		this.getThatLocation()
-			.then(pos => {
-				let latt = pos.coords.latitude;
-				let long = pos.coords.longitude;
-				return fetch(`${baseURI}${latt},${long}&key=${API_KEY}`);
-			})
+			.then(({ latitude, longitude }) =>
+				fetch(`${baseURI}${latitude},${longitude}&key=${API_KEY}`)
+			)
 			.then(res => res.json())
 			.then(json => {
 				let arr = json.results.map(place => place.name);
